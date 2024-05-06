@@ -1,11 +1,17 @@
 export default function updateUniqueItems(map) {
-  if (!(map instanceof Map)) {
-    throw Error('Cannot process');
+  if (!map || typeof map !== "object") {
+    throw new Error("Cannot process. Argument must be a map.");
   }
-  for (const elements of map) {
-    if (elements[1] === 1) {
-      map.set(elements[0], 100);
+
+  const updatedMap = new Map();
+
+  for (const [key, value] of map.entries()) {
+    if (value.quantity === 1) {
+      updatedMap.set(key, { ...value, quantity: 100 });
+    } else {
+      updatedMap.set(key, value);
     }
   }
-  return map;
+
+  return updatedMap;
 }
