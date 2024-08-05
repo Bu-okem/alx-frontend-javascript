@@ -1,6 +1,6 @@
 ## 0x00-ES6_basic
 
-# Things I should be able to explain by the end of this project
+### Things I should be able to explain by the end of this project
 
 * What ES6 is
 * New features introduced in ES6
