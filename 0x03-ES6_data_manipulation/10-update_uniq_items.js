@@ -1,6 +1,6 @@
 export default function updateUniqueItems(map) {
   if (!map || typeof map !== "object") {
-    throw new Error("Cannot process. Argument must be a map.");
+    throw new Error("Cannot process");
   }
 
   const updatedMap = new Map();
